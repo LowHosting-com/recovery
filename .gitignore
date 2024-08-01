@@ -1,0 +1,6 @@
+.build/
+chroot/
+build.log
+live-image-amd64.*
+cache/
+binary/

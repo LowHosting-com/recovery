@@ -1,0 +1,10 @@
+[Unit]
+Description=Clone latest installimage
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/git clone https://github.com/LowHosting-com/installimage /opt/installimage && chmod a+rx /opt/installimage/installimage
+ 
+[Install]
+WantedBy=multi-user.target

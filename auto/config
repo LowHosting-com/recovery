@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+# lb config noauto \
+#	"${@}"
+
+lb config noauto \
+	--distribution bookworm \
+	--archive-areas "main contrib non-free non-free-firmware" \
+	"${@}"

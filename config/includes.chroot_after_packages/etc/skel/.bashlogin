@@ -1,0 +1,10 @@
+echo "Waiting for system to be up and running..."
+systemctl is-system-running --wait
+
+echo "Mounting the NFS share"
+mkdir -p ~/.nfs/
+mount 66.118.245.38:/nfs/ ~/.nfs/
+
+echo "Cloning repositories"
+git clone https://github.com/LowHosting-com/installimage.git
+
